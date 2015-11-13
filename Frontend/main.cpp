@@ -89,7 +89,7 @@ int main(int argc, char** argv)
 				double minTime = 1000;
 				double maxTime = 0;
 				double totalTime = 0;
-				long totalLoops = 0;
+				long long totalLoops = 0;
 				alpacaResult curResult(0,0.0,0);
 				clearNodeArrays();
 				drawArray.clear();
@@ -123,7 +123,7 @@ int main(int argc, char** argv)
 				std::cout << "Average time: " << totalTime / sampleCount << std::endl;
 				std::cout << "Minimum time: " << minTime << std::endl;
 				std::cout << "Maximum time: " << maxTime << std::endl;
-				std::cout << "Average loops: " << totalLoops / (double)sampleCount << std::endl;
+				std::cout << "Average loops: " << totalLoops / (long double)sampleCount << std::endl;
 			}
 			else if (cmdIn == "random")
 			{
