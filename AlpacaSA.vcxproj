@@ -79,35 +79,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="alpaca.cpp" />
-    <ClCompile Include="alpacaMT.cpp">
+    <ClCompile Include="Alpaca\alpaca.cpp" />
+    <ClCompile Include="Alpaca\alpacaMT.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="cmdHandler.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="node.cpp" />
-    <ClCompile Include="pathOption.cpp" />
-    <ClCompile Include="SDL2_gfxPrimitives.c" />
-    <ClCompile Include="insertion_queue.cpp" />
+    <ClCompile Include="Frontend\cmdHandler.cpp" />
+    <ClCompile Include="Frontend\main.cpp" />
+    <ClCompile Include="Alpaca\node.cpp" />
+    <ClCompile Include="Alpaca\pathOption.cpp" />
+    <ClCompile Include="Frontend\SDL2_gfxPrimitives.c" />
+    <ClCompile Include="Alpaca\insertion_queue.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cmdHandler.h" />
-    <ClInclude Include="alpaca.h" />
-    <ClInclude Include="node.h" />
-    <ClInclude Include="main.h" />
-    <ClInclude Include="pathOption.h" />
+    <ClInclude Include="Frontend\cmdHandler.h" />
+    <ClInclude Include="Alpaca\alpaca.h" />
+    <ClInclude Include="Alpaca\node.h" />
+    <ClInclude Include="Frontend\main.h" />
+    <ClInclude Include="Alpaca\pathOption.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="SDL2_gfxPrimitives.h" />
-    <ClInclude Include="segmented_queue.h">
+    <ClInclude Include="Frontend\SDL2_gfxPrimitives.h" />
+    <ClInclude Include="Alpaca\segmented_queue.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="sortPath.h">
+    <ClInclude Include="Alpaca\sortPath.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="sign.h">
+    <ClInclude Include="Alpaca\sign.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="insertion_queue.h" />
+    <ClInclude Include="Alpaca\insertion_queue.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="AlpacaNTA.ico" />

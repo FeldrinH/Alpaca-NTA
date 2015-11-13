@@ -13,66 +13,78 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Alpaca">
+      <UniqueIdentifier>{091f2e04-b27e-48aa-a354-cd6eb7eff226}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Frontend">
+      <UniqueIdentifier>{a0b8b9e8-fdcb-45de-9075-ab89cec3ed1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Alpaca">
+      <UniqueIdentifier>{8576731a-ff1e-4849-ae80-660cecaab71f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Frontend">
+      <UniqueIdentifier>{060d14bf-b27c-4006-8d7d-70535f4eec3d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SDL2_gfxPrimitives.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Alpaca\alpaca.h">
+      <Filter>Header Files\Alpaca</Filter>
     </ClInclude>
-    <ClInclude Include="pathOption.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Alpaca\insertion_queue.h">
+      <Filter>Header Files\Alpaca</Filter>
     </ClInclude>
-    <ClInclude Include="sortPath.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Alpaca\pathOption.h">
+      <Filter>Header Files\Alpaca</Filter>
     </ClInclude>
-    <ClInclude Include="segmented_queue.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Alpaca\node.h">
+      <Filter>Header Files\Alpaca</Filter>
     </ClInclude>
-    <ClInclude Include="cmdHandler.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Alpaca\segmented_queue.h">
+      <Filter>Header Files\Alpaca</Filter>
     </ClInclude>
-    <ClInclude Include="alpaca.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Alpaca\sign.h">
+      <Filter>Header Files\Alpaca</Filter>
     </ClInclude>
-    <ClInclude Include="node.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Alpaca\sortPath.h">
+      <Filter>Header Files\Alpaca</Filter>
     </ClInclude>
-    <ClInclude Include="main.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Frontend\cmdHandler.h">
+      <Filter>Header Files\Frontend</Filter>
     </ClInclude>
-    <ClInclude Include="sign.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Frontend\main.h">
+      <Filter>Header Files\Frontend</Filter>
+    </ClInclude>
+    <ClInclude Include="Frontend\SDL2_gfxPrimitives.h">
+      <Filter>Header Files\Frontend</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="insertion_queue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SDL2_gfxPrimitives.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Frontend\cmdHandler.cpp">
+      <Filter>Source Files\Frontend</Filter>
     </ClCompile>
-    <ClCompile Include="pathOption.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Frontend\main.cpp">
+      <Filter>Source Files\Frontend</Filter>
     </ClCompile>
-    <ClCompile Include="node.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Frontend\SDL2_gfxPrimitives.c">
+      <Filter>Source Files\Frontend</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Alpaca\insertion_queue.cpp">
+      <Filter>Source Files\Alpaca</Filter>
     </ClCompile>
-    <ClCompile Include="cmdHandler.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Alpaca\node.cpp">
+      <Filter>Source Files\Alpaca</Filter>
     </ClCompile>
-    <ClCompile Include="alpaca.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Alpaca\pathOption.cpp">
+      <Filter>Source Files\Alpaca</Filter>
     </ClCompile>
-    <ClCompile Include="alpacaMT.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Alpaca\alpacaMT.cpp">
+      <Filter>Source Files\Alpaca</Filter>
     </ClCompile>
-    <ClCompile Include="insertion_queue.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Alpaca\alpaca.cpp">
+      <Filter>Source Files\Alpaca</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
