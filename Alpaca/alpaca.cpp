@@ -50,7 +50,7 @@ double Alpaca(std::vector<int>* drawArray, std::string &cmdIn)
 	pathOption curOption = pathOption(minPathSet);
 	pathOption pushOption = pathOption(minPathSet);
 
-	do
+	while (!nodeQueue.empty() && cmdIn != "stop")
 	{
 		curOption = nodeQueue.pull_back();
 
@@ -69,11 +69,10 @@ double Alpaca(std::vector<int>* drawArray, std::string &cmdIn)
 		}
 
 		//nodeQueue.refreshSegments();
-
 		++loopNum;
 		//std::cout << loopNum << " " << curOption.getEstimate() << " " << curOption.getDepth() << " " << nodeQueue.segments() << std::endl;
 
-	} while (!nodeQueue.empty() && cmdIn != "stop");
+	}
 
 	std::chrono::high_resolution_clock::time_point endTime = std::chrono::high_resolution_clock::now();
 	std::chrono::duration<double> execTime = std::chrono::duration_cast<std::chrono::duration<double>>(endTime - beginTime);

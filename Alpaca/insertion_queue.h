@@ -9,7 +9,7 @@ public:
 	insertion_queue();
 	~insertion_queue();
 
-	void push(pathOption inPath);
+	void push(pathOption &inPath);
 	pathOption pull_back();
 
 	bool empty();

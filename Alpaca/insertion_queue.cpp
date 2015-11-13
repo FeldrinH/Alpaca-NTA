@@ -8,7 +8,7 @@ insertion_queue::~insertion_queue()
 {
 }
 
-void insertion_queue::push(pathOption inPath)
+void insertion_queue::push(pathOption &inPath)
 {
 	
 	if(!pathArray.empty())

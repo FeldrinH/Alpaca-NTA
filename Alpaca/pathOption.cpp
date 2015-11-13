@@ -27,7 +27,7 @@ inline int pathOption::getDepth() const
 
 inline int pathOption::getEstimate() const
 {
-	return (curDistance + minPathEstimate);
+	return minPathEstimate + curDistance;
 }
 
 inline node pathOption::getLastNode()
@@ -44,6 +44,7 @@ inline void pathOption::updateMinPath()
 		minPathEstimate += *j;
 		j++;
 	}
+	//minPathEstimate += curDistance;
 }
 
 bool pathOption::addNode(int newNode, pathOption &curBest)
