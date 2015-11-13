@@ -70,7 +70,7 @@ void AlpacaThread(insertion_queue *nodeQueue, multiset<int> *minPathSet, int *pr
 	} 
 }
 
-double AlpacaMT(vector<int>* drawArray, int threadCount)
+alpacaMTResult AlpacaMT(vector<int>* drawArray, int threadCount)
 {
 	cout << VERSION_NAME " Multi-Threaded began..." << endl;
 	chrono::high_resolution_clock::time_point beginTime = chrono::high_resolution_clock::now();
@@ -133,5 +133,5 @@ double AlpacaMT(vector<int>* drawArray, int threadCount)
 	bestFinished.printPath();
 	cout << "Node count: " << pathOption::maxDepth - 1 << " + 1" << endl;
 	cout << "Time: " << execTime.count() << endl;
-	return execTime.count();
+	return alpacaMTResult(bestFinished.curDistance,execTime.count());
 }

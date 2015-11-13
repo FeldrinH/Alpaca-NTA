@@ -85,12 +85,12 @@ int main(int argc, char** argv)
 			{
 				int nodeCount;
 				int sampleCount;
+				std::cin >> nodeCount >> sampleCount;
 				double minTime = 1000;
 				double maxTime = 0;
 				double totalTime = 0;
-				double curTime;
-				std::cin >> nodeCount;
-				std::cin >> sampleCount;
+				long totalLoops = 0;
+				alpacaResult curResult(0,0.0,0);
 				clearNodeArrays();
 				drawArray.clear();
 				nodeArray.erase(nodeArray.begin() + 1, nodeArray.end());
@@ -102,15 +102,16 @@ int main(int argc, char** argv)
 					}
 					pathOption::maxDepth = nodeArray.size();
 
-					curTime = Alpaca(&drawArray,cmdIn);
-					totalTime += curTime;
-					if (curTime > maxTime)
+					curResult = Alpaca(&drawArray,cmdIn);
+					totalLoops += curResult.loops;
+					totalTime += curResult.time;
+					if (curResult.time > maxTime)
 					{
-						maxTime = curTime;
+						maxTime = curResult.time;
 					}
-					if (curTime < minTime)
+					if (curResult.time < minTime)
 					{
-						minTime = curTime;
+						minTime = curResult.time;
 					}
 
 					clearNodeArrays();
@@ -122,6 +123,7 @@ int main(int argc, char** argv)
 				std::cout << "Average time: " << totalTime / sampleCount << std::endl;
 				std::cout << "Minimum time: " << minTime << std::endl;
 				std::cout << "Maximum time: " << maxTime << std::endl;
+				std::cout << "Average loops: " << totalLoops / (double)sampleCount << std::endl;
 			}
 			else if (cmdIn == "random")
 			{
@@ -169,7 +171,7 @@ int main(int argc, char** argv)
 
 				for (; count <= maxCount; count += step)
 				{
-					curTime = AlpacaMT(&drawArray, count);
+					curTime = AlpacaMT(&drawArray, count).time;
 					if (curTime < bestTime)
 					{
 						bestCount = count;

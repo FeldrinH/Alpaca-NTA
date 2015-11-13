@@ -8,7 +8,7 @@
 #include "..\Frontend\cmdHandler.h"
 #include "alpaca.h"
 
-double Alpaca(std::vector<int>* drawArray, std::string &cmdIn)
+alpacaResult Alpaca(std::vector<int>* drawArray, std::string &cmdIn)
 {
 	std::cout << VERSION_NAME " began..." << std::endl;
 	std::chrono::high_resolution_clock::time_point beginTime = std::chrono::high_resolution_clock::now();
@@ -74,12 +74,12 @@ double Alpaca(std::vector<int>* drawArray, std::string &cmdIn)
 
 	}
 
+	clearNodeArrays();
+
 	std::chrono::high_resolution_clock::time_point endTime = std::chrono::high_resolution_clock::now();
 	std::chrono::duration<double> execTime = std::chrono::duration_cast<std::chrono::duration<double>>(endTime - beginTime);
 
 	*drawArray = bestFinished.curPath;
-
-	clearNodeArrays();
 
 	std::cout << "..." VERSION_NAME " ended." << std::endl;
 	std::cout << "Quasi-best path: " << quasiBest << std::endl;
@@ -88,5 +88,5 @@ double Alpaca(std::vector<int>* drawArray, std::string &cmdIn)
 	std::cout << "Node count: " << pathOption::maxDepth - 1 << " + 1" << std::endl;
 	std::cout << "Total loops: " << loopNum << std::endl;
 	std::cout << "Time: " << execTime.count() << std::endl;
-	return execTime.count();
+	return alpacaResult(bestFinished.curDistance,execTime.count(),loopNum);
 }
