@@ -1,7 +1,7 @@
 #include "main.h"
 #include "cmdHandler.h"
-#include "alpaca.h"
-#include "pathOption.h"
+#include "..\Alpaca\alpaca.h"
+#include "..\Alpaca\pathOption.h"
 #include "SDL2_gfxPrimitives.h"
 #include <iostream>
 #include <string>

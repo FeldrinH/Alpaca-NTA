@@ -1,7 +1,7 @@
 #include "Node.h"
 #include <iostream>
-#include "SDL2_gfxPrimitives.h"
-#include "Main.h"
+#include "..\Frontend\SDL2_gfxPrimitives.h"
+#include "..\Frontend\main.h"
 
 node::node(int x, int y)
 	:x(x), y(y)

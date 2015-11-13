@@ -3,9 +3,9 @@
 #include <iostream>
 #include "sortPath.h"
 #include <algorithm>
-#include "main.h"
+#include "..\Frontend\main.h"
 #include "insertion_queue.h"
-#include "cmdHandler.h"
+#include "..\Frontend\cmdHandler.h"
 #include "alpaca.h"
 
 double Alpaca(std::vector<int>* drawArray, std::string &cmdIn)

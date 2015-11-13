@@ -2,9 +2,9 @@
 #include "pathOption.h"
 #include <iostream>
 #include <algorithm>
-#include "main.h"
+#include "..\Frontend\main.h"
 #include "insertion_queue.h"
-#include "cmdHandler.h"
+#include "..\Frontend\cmdHandler.h"
 #include "alpaca.h"
 #include <thread>
 #include <mutex>

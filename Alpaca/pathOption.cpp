@@ -1,5 +1,5 @@
 #include "pathOption.h"
-#include "Main.h"
+#include "..\Frontend\main.h"
 #include <iostream>
 
 int pathOption::maxDepth = 1;

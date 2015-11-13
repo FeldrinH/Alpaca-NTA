@@ -2,7 +2,7 @@
 
 #include "SDL/SDL.h"
 #include <vector>
-#include "node.h"
+#include "..\Alpaca\node.h"
 
 extern SDL_Renderer* renderer;
 extern std::vector<node> nodeArray;
