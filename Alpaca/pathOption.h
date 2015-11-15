@@ -31,6 +31,5 @@ public:
 	int minPathEstimate;
 	std::set<int> openNodes;
 	std::vector<int> curPath;
-	bool isPrecise;
 };
 

@@ -6,7 +6,7 @@ int pathOption::maxDepth = 1;
 //std::vector<int>* pathOption::minPathArray = nullptr;
 
 pathOption::pathOption(std::multiset<int> minPathSet)
-	:curDistance(0), isPrecise(false), minPathSet(minPathSet)
+	:curDistance(0), minPathSet(minPathSet)
 {
 	curPath.push_back(0);
 	for (int i = 1; i < maxDepth; i++)
