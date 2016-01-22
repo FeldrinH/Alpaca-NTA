@@ -5,7 +5,7 @@
 int pathOption::maxDepth = 1;
 //std::vector<int>* pathOption::minPathArray = nullptr;
 
-pathOption::pathOption(std::multiset<int> minPathSet)
+pathOption::pathOption(std::multiset<uint16_t> minPathSet)
 	:curDistance(0), minPathSet(minPathSet)
 {
 	curPath.push_back(0);
@@ -37,7 +37,7 @@ inline node pathOption::getLastNode()
 
 inline void pathOption::updateMinPath()
 {
-	std::multiset<int>::iterator j = minPathSet.begin();
+	std::multiset<uint16_t>::iterator j = minPathSet.begin();
 	minPathEstimate = 0;
 	for (int i = 0; i < maxDepth - curPath.size() - 1; i++)
 	{
@@ -73,7 +73,7 @@ bool pathOption::addNode(int newNode, pathOption &curBest)
 		return false;
 	}
 
-	for (std::set<int>::iterator i = openNodes.begin(); i != openNodes.end(); i++)
+	for (std::set<uint8_t>::iterator i = openNodes.begin(); i != openNodes.end(); i++)
 	{
 		minPathSet.erase(minPathSet.find(getLastNode().distanceArray[*i]));
 	}
@@ -85,9 +85,9 @@ bool pathOption::addNode(int newNode, pathOption &curBest)
 
 void pathOption::printPath() const
 {
-	for (std::vector<int>::const_iterator i = curPath.begin(); i != curPath.end(); i++)
+	for (std::vector<uint8_t>::const_iterator i = curPath.begin(); i != curPath.end(); i++)
 	{
-		std::cout << *i << ' '; 
+		std::cout << +(*i) << ' '; 
 	}
 	std::cout << std::endl;
 }

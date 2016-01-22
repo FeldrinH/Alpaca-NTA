@@ -13,7 +13,7 @@ using namespace std;
 
 mutex queueLock;
 
-void AlpacaThread(insertion_queue *nodeQueue, multiset<int> *minPathSet, int *procCount, pathOption *bestFinished)
+void AlpacaThread(insertion_queue *nodeQueue, multiset<uint16_t> *minPathSet, int *procCount, pathOption *bestFinished)
 {
 	unique_lock<mutex> queueHandle(queueLock, defer_lock);
 
@@ -38,7 +38,7 @@ void AlpacaThread(insertion_queue *nodeQueue, multiset<int> *minPathSet, int *pr
 				queueHandle.unlock();
 			}
 
-			for (set<int>::iterator i = curOption.openNodes.begin(); i != curOption.openNodes.end(); i++)
+			for (set<uint8_t>::iterator i = curOption.openNodes.begin(); i != curOption.openNodes.end(); i++)
 			{
 				pushOption = curOption;
 				if (pushOption.addNode(*i, *bestFinished))
@@ -70,12 +70,12 @@ void AlpacaThread(insertion_queue *nodeQueue, multiset<int> *minPathSet, int *pr
 	} 
 }
 
-alpacaMTResult AlpacaMT(vector<int>* drawArray, int threadCount)
+alpacaMTResult AlpacaMT(vector<uint8_t>* drawArray, int threadCount)
 {
 	cout << VERSION_NAME " Multi-Threaded began..." << endl;
 	chrono::high_resolution_clock::time_point beginTime = chrono::high_resolution_clock::now();
 
-	multiset<int> minPathSet;
+	multiset<uint16_t> minPathSet;
 	nodeArray[0].preCalcStart();
 	for (int i = 1; i < nodeArray.size(); i++)
 	{
@@ -89,7 +89,7 @@ alpacaMTResult AlpacaMT(vector<int>* drawArray, int threadCount)
 	for (int i = 1; i < pathOption::maxDepth; i++)
 	{
 		smallest = *(bestFinished.openNodes.begin());
-		for (set<int>::iterator i = ++bestFinished.openNodes.begin(); i != bestFinished.openNodes.end(); i++)
+		for (set<uint8_t>::iterator i = ++bestFinished.openNodes.begin(); i != bestFinished.openNodes.end(); i++)
 		{
 			if (bestFinished.getLastNode().distanceArray[*i] < bestFinished.getLastNode().distanceArray[smallest])
 			{

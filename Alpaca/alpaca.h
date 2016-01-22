@@ -22,5 +22,5 @@ struct alpacaMTResult
 	double time;
 };
 
-alpacaResult Alpaca(std::vector<int>* drawArray, std::string &cmdIn);
-alpacaMTResult AlpacaMT(std::vector<int>* drawArray, int threadCount);
+alpacaResult Alpaca(std::vector<uint8_t>* drawArray, std::string &cmdIn);
+alpacaMTResult AlpacaMT(std::vector<uint8_t>* drawArray, int threadCount);

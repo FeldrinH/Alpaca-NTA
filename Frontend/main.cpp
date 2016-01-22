@@ -23,7 +23,7 @@ int main(int argc, char** argv)
 
 	int threadCount = std::thread::hardware_concurrency();
 
-	std::vector<int> drawArray;
+	std::vector<uint8_t> drawArray;
 	nodeArray.push_back(node(320, 160));
 	std::string cmdIn = "";
 	int radius = 20;

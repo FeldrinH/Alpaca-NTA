@@ -3,6 +3,7 @@
 #include <vector>
 #include "Node.h"
 #include <set>
+#include <cstdint>
 
 class pathOption
 {
@@ -14,7 +15,7 @@ public:
 	int curDistance;
 	static int maxDepth;
 
-	pathOption(std::multiset<int> minPathSet);
+	pathOption(std::multiset<uint16_t> minPathSet);
 	~pathOption();
 
 	int getDepth() const;
@@ -27,9 +28,9 @@ public:
 	node getLastNode();
 	void updateMinPath();
 
-	std::multiset<int> minPathSet;
+	std::multiset<uint16_t> minPathSet;
 	int minPathEstimate;
-	std::set<int> openNodes;
-	std::vector<int> curPath;
+	std::set<uint8_t> openNodes;
+	std::vector<uint8_t> curPath;
 };
 

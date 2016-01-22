@@ -8,12 +8,12 @@
 #include "..\Frontend\cmdHandler.h"
 #include "alpaca.h"
 
-alpacaResult Alpaca(std::vector<int>* drawArray, std::string &cmdIn)
+alpacaResult Alpaca(std::vector<uint8_t>* drawArray, std::string &cmdIn)
 {
 	std::cout << VERSION_NAME " began..." << std::endl;
 	std::chrono::high_resolution_clock::time_point beginTime = std::chrono::high_resolution_clock::now();
 
-	std::multiset<int> minPathSet;
+	std::multiset<uint16_t> minPathSet;
 	nodeArray[0].preCalcStart();
 	for (int i = 1; i < nodeArray.size(); i++)
 	{
@@ -27,7 +27,7 @@ alpacaResult Alpaca(std::vector<int>* drawArray, std::string &cmdIn)
 	for (int i = 1; i < pathOption::maxDepth; i++)
 	{
 		smallest = *(bestFinished.openNodes.begin());
-		for (std::set<int>::iterator i = ++bestFinished.openNodes.begin(); i != bestFinished.openNodes.end(); i++)
+		for (std::set<uint8_t>::iterator i = ++bestFinished.openNodes.begin(); i != bestFinished.openNodes.end(); i++)
 		{
 			if (bestFinished.getLastNode().distanceArray[*i] < bestFinished.getLastNode().distanceArray[smallest])
 			{
@@ -54,7 +54,7 @@ alpacaResult Alpaca(std::vector<int>* drawArray, std::string &cmdIn)
 	{
 		curOption = nodeQueue.pull_back();
 
-		for (std::set<int>::iterator i = curOption.openNodes.begin(); i != curOption.openNodes.end(); i++)
+		for (std::set<uint8_t>::iterator i = curOption.openNodes.begin(); i != curOption.openNodes.end(); i++)
 		{
 			pushOption = curOption;
 			if (pushOption.addNode(*i, bestFinished))

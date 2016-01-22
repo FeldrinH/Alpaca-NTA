@@ -8,7 +8,7 @@ node::node(int x, int y)
 {
 }
 
-void node::preCalcDistance(int index, std::multiset<int>* minPathArray)
+void node::preCalcDistance(int index, std::multiset<uint16_t>* minPathArray)
 {
 	distanceArray.push_back(-2015);
 	for (int i = 1; i < nodeArray.size(); i++)
