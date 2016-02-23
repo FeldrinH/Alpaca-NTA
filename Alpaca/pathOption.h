@@ -15,6 +15,7 @@ public:
 	int curDistance;
 	static int maxDepth;
 
+	pathOption(); //Default constructor for initialization. DO NOT USE!
 	pathOption(std::multiset<uint16_t> minPathSet);
 	~pathOption();
 

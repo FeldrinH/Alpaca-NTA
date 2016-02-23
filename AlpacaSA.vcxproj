@@ -89,6 +89,7 @@
     <ClCompile Include="Alpaca\pathOption.cpp" />
     <ClCompile Include="Frontend\SDL2_gfxPrimitives.c" />
     <ClCompile Include="Alpaca\insertion_queue.cpp" />
+    <ClCompile Include="Alpaca\multithread_queue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Frontend\cmdHandler.h" />
@@ -96,6 +97,7 @@
     <ClInclude Include="Alpaca\node.h" />
     <ClInclude Include="Frontend\main.h" />
     <ClInclude Include="Alpaca\pathOption.h" />
+    <ClInclude Include="Alpaca\multithread_queue.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Frontend\SDL2_gfxPrimitives.h" />
     <ClInclude Include="Alpaca\segmented_queue.h">

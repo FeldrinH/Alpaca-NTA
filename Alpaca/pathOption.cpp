@@ -5,6 +5,10 @@
 int pathOption::maxDepth = 1;
 //std::vector<int>* pathOption::minPathArray = nullptr;
 
+pathOption::pathOption()
+{
+}
+
 pathOption::pathOption(std::multiset<uint16_t> minPathSet)
 	:curDistance(0), minPathSet(minPathSet)
 {

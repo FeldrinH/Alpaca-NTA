@@ -60,6 +60,9 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Alpaca\multithread_queue.h">
+      <Filter>Header Files\Alpaca</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Frontend\cmdHandler.cpp">
@@ -85,6 +88,9 @@
     </ClCompile>
     <ClCompile Include="Alpaca\alpaca.cpp">
       <Filter>Source Files\Alpaca</Filter>
+    </ClCompile>
+    <ClCompile Include="Alpaca\multithread_queue.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

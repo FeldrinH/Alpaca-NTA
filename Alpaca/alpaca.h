@@ -3,7 +3,7 @@
 #include <vector>
 #include "Node.h"
 
-#define VERSION_NAME "AlpacaNTA 1.3.3"
+#define VERSION_NAME "AlpacaNTA 1.4.0"
 
 struct alpacaResult
 {
